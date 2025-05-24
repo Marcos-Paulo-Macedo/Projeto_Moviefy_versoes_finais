@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  .perfil-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .perfil-sidebar {
+    background-color: #1db954;
+    padding: 2rem;
+    min-width: 220px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .perfil-sidebar h2 {
+    font-size: 1.8rem;
+  }
+  
+  .perfil-sidebar button {
+    background-color: #000;
+    color: #1db954;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .perfil-content {
+    flex: 1;
+    padding: 2rem;
+  }
+  
+  .perfil-top {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .perfil-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1db954;
+  }
+  
+  .perfil-photo label {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background-color: #1db954;
+    color: #000;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .perfil-photo input {
+    display: none;
+  }
+  
+  .perfil-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .perfil-sections {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .perfil-card {
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.2s;
+  }
+  
+  .perfil-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .perfil-card h4 {
+    margin-bottom: 0.5rem;
+    color: #1db954;
+  }
+
+/* Grid geral para Favoritos, Avaliações e Sugeridos */
+.favoritos-grid,
+.avaliacoes-grid,
+.sugeridos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+/* Cards Favoritos e Sugeridos */
+.favorito-item,
+.sugerido-item {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 0.8rem;
+  text-align: center;
+  cursor: default;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+}
+
+.favorito-item:hover,
+.sugerido-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(70, 70, 70, 0.7);
+}
+
+.favorito-item img,
+.sugerido-item img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  object-fit: cover;
+  aspect-ratio: 2 / 3;
+}
+
+.favorito-item p,
+.sugerido-item p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1db954;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.favorito-item button {
+  background-color: #fc0000;
+  border: none;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.favorito-item button:hover {
+  background-color: #cc3333;
+}
+
+
+.avaliacao-item {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 0.8rem 1.2rem 1.2rem;
+  box-sizing: border-box;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;     
+  max-width: 100%;
+}
+.avaliacao-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(49, 49, 49, 0.8);
+}
+
+.avaliacao-item h5 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+  color: #1db954;
+  font-weight: 700;
+}
+
+.avaliacao-item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #eee;
+  margin-bottom: 0.3rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.avaliacao-item strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn-remover-avaliacao {
+  align-self: flex-start;
+  background-color: #ff0000;
+  border: none;
+  color: white;
+  padding: 0.35rem 0.7rem;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-remover-avaliacao:hover {
+  background-color: #cc3333;
+}
+
+/* Responsividade adicional */
+@media (max-width: 768px) {
+  .favoritos-grid,
+  .sugeridos-grid,
+  .avaliacoes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .favorito-item img,
+  .sugerido-item img {
+    max-width: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+  .favoritos-grid,
+  .sugeridos-grid,
+  .avaliacoes-grid {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+
+  .favorito-item img,
+  .sugerido-item img {
+    max-width: 100px;
+  }
+}
